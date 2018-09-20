@@ -1,0 +1,49 @@
+{
+  "name": "@ghadyani-framework/redux-components",
+  "version": "0.0.0",
+  "description": "Redux helper components.",
+  "license": "MITNFA",
+  "scripts": {
+    "debug": "nodemon --inspect .",
+    "lint": "eslint .",
+    "start": "yarn && eslint . && nodemon .",
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "engines": {
+    "node": ">=8.11.4",
+    "yarn": ">=1.6.0"
+  },
+  "_moduleAliases": {
+    "$components": "./components",
+    "$utils": "./utils"
+  },
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "babelrc": false
+      }
+    },
+    "files": [
+      "components/**/*.test.js",
+      "utils/**/*.test.js"
+    ],
+    "sources": [
+      "**/*.js"
+    ]
+  },
+  "devDependencies": {
+    "@ghadyani-framework/base": "^0.3.0"
+  },
+  "peerDependencies": {
+    "@ghadyani-framework/base": ">=0.2.0 <1"
+  },
+  "dependencies": {
+    "@ghadyani-framework/eslint-config-node": "^0.0.3",
+    "@ghadyani-framework/eslint-config-web": "^0.0.0",
+    "babel-eslint": "^9.0.0",
+    "eslint-plugin-compat": "^2.5.1",
+    "eslint-plugin-react": "^7.11.1",
+    "react": "^16.5.2"
+  }
+}
