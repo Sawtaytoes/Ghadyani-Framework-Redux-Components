@@ -1,3 +1,27 @@
+_**NOTE:** This project is very simple to create using Redux-Hooks so it's no longer going to be supported in the future._
+
+To do the same thing with Redux Hooks, this is what it would look like:
+
+```js
+const TestComponent = ({
+	someProp,
+}) => {
+	const dispatch = useDispatch()
+
+	const { somethingFromState } = (
+		useSelector(
+			selectSomethingFromState(someProp)
+		)
+	)
+
+	return (
+		<div>
+			{somethingFromState}
+		</div>
+	)
+}
+```
+
 # Redux Components for Ghadyani Framework Packages
 Redux helper components (currently just `ReduxConnection`).
 
